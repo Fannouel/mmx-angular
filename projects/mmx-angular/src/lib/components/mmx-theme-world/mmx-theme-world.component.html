@@ -1,0 +1,17 @@
+<h2 i18n="@@home-theme-worlds" class="text-center">Theme worlds test</h2>
+<div class="container gallery">
+    <!-- Gallery -->
+    <div class="row">
+        <ng-template ngFor let-themes [ngForOf]="themeWorld">
+            <div class="col-{{convertSizeForSmallScreen[themes[0].col]}} col-lg-{{themes[0].col}} image-container rounded">
+                <a *ngFor="let theme of themes" [routerLink]="theme.link" class="wrapper rounded text-center mb-3">
+                    <mmx-image [src]="'/website_assets/schuco/' + theme.image" alt="" [class]="'w-100 rounded'" [imagesURL]="imagesURL"/>
+                    <div class="caption">
+                        <p>{{theme.title[locale]}}</p>
+                    </div>
+                </a>
+            </div>
+        </ng-template>
+    </div>
+</div>
+

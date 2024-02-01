@@ -1,0 +1,23 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="currentScale === undefined" aria-current="page" (click)="changeScale(undefined)">All</a>
+    </li>
+    <li *ngFor="let scale of scales" class="nav-item">
+      <a class="nav-link" [class.active]="scale == currentScale" aria-current="page" (click)="changeScale(scale)">{{scale}}</a>
+    </li>
+  </ul>
+  <mmx-pagination *ngIf="paginations.length > 1" [pageNumber]="pageNumber" [links]="links" [paginations]="paginations"></mmx-pagination>
+  <div class="row">
+    <div *ngFor="let product of products" class="col-6 col-lg-3">
+      <mmx-product-box [product]="product"></mmx-product-box>
+    </div>
+    <div *ngIf="products.length == 0" class="col-12">
+      <div *ngIf="!loading" class="alert alert-warning" role="alert" i18n="@@no-products-found">No products found.</div>
+      <div *ngIf="loading" class="d-flex justify-content-center mt-5">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden" i18n="@@loading">Loading...</span>
+        </div>
+      </div>
+  </div>
+  <mmx-pagination *ngIf="paginations.length > 1" [pageNumber]="pageNumber" [links]="links" [paginations]="paginations"></mmx-pagination>
+  

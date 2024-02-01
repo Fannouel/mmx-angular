@@ -1,0 +1,12 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" [id]="'headingFAQ' + index">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#faqCollapse' + index" aria-expanded="true" [attr.aria-controls]="'faqCollapse' + index">
+            {{question}}
+        </button>
+    </h2>
+    <div [id]="'faqCollapse' + index" class="accordion-collapse collapse" [class.show]="open" [attr.aria-labelledby]="'headingFAQ' + index">
+        <div class="accordion-body">
+            {{answer}}
+        </div>
+    </div>
+</div>

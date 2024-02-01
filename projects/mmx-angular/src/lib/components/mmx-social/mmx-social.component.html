@@ -1,0 +1,87 @@
+<!-- Social-->
+<section class="social-v2 my-4">
+    <div class="container px-0">
+        <div class="row equal">
+            <div class="col-12 col-md-6 mb-4">
+                <div class="px-3 px-lg-4 px-xl-5 py-3 py-md-4 py-lg-5 social rounded">
+                    <div class="d-flex">
+                        <div class="me-4">
+                            <svg class="social-v2--icon">
+                                <use xlink:href="./assets/img/symbol_sprite.svg#social"></use>
+                            </svg>
+                        </div>
+
+                        <div class="flex-grow-1">
+                            <div class="h1 mb-3" i18n="@@connect-with-us">Connect with us!</div>
+                            <a href="#" id="social-discover" (click)="onSocialToggle($event)" class="social-v2--button-pill">
+                                <span i18n="@@discover">Discover</span>
+                                <div class="arrow-right ms-auto">
+                                    <svg class="animation knock-to-right">
+                                        <use xlink:href="./assets/img/symbol_sprite.svg#arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+
+                            <div class="social-v2--list-socials" id="social-list">
+                                <a href="http://twitter.com/Schuco_DE" title="X" target="_blank" rel="noopener">
+                                    <svg>
+                                        <use xlink:href="./assets/img/symbol_sprite.svg#twitter"></use>
+                                    </svg>
+                                </a>
+
+                                <a href="https://www.facebook.com/schuco.de" title="Facebook" target="_blank" rel="noopener">
+                                    <svg>
+                                        <use xlink:href="./assets/img/symbol_sprite.svg#facebook"></use>
+                                    </svg>
+                                </a>
+
+                                <a href="https://www.instagram.com/schuco_official/" title="Instagram" target="_blank" rel="noopener">
+                                    <svg>
+                                        <use xlink:href="./assets/img/symbol_sprite.svg#instagram"></use>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="social-v2--list-socials--toggle" (click)="onSocialToggle($event)">
+                                    <svg>
+                                        <use xlink:href="./assets/img/symbol_sprite.svg#plus"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-4 h-100">
+                <div class="container newsletter rounded">
+                    <div class="h1 pt-5 mb-3 text-center" i18n="@@sign-up-newsletter">Sign up for the newsletter here!</div>
+                    <form>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="d-flex social-v2--newsletter--first-input-fields">
+                                <input type="email"  formControlName="email" class="rounded-pill border-0 py-2 py-md-3 px-2 me-1 px-md-3 px-lg-4 flex-grow-1 ms-1 ms-lg-2" autocomplete="off" required="" placeholder="Your email address" i18n-placeholder="@@newsletter-email-placeholder">
+                                <button type="submit" class="bg-scheme-primary border-0 rounded-pill px-3 px-lg-4 text-white m-0 d-inline-block">
+                                    <span i18n="@@newsletter-subscribe">Subscribe</span>
+                                </button>
+                            </div>
+                            <div id="mce-responses" class="clear mt-1 ms-2">
+                                <div class="alert alert-success" *ngIf="submitted == true && error == false" i18n="@@thank-you-subscribe-newsletter">Thank you for subscribing.</div>
+                                <div class="alert alert-danger" *ngIf="error == true" i18n="@@error-newsletter-subscribe">We are sorry, but something has gone wrong. Please try again later.</div>
+                                <div class="alert alert-warning" *ngIf="invalid == true" i18n="@@warning-newsletter-wrong-email">Please enter a valid email address.</div>
+                            </div>
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                <input type="text" name="b_c7ada9de414e7dd046fa0760a_8f38671f9f" tabindex="-1" value="">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="">
+    <div class="row">
+
+    </div>
+</section>

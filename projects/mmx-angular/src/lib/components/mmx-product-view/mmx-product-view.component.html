@@ -1,0 +1,47 @@
+
+<div *ngIf="product && !loading" class="container custom_container my-5">
+    <div class="row">
+        <div class="card col-12 col-md-6">
+            <div class="images p-3">
+                <div class="text-center p-4">
+                    <img class="rounded w-100" [src]="target"  [redZoom]="target" redZoomClass="red-zoom--style--window" (error)="onImageError($event)" />
+                </div>
+                <div class="row" *ngIf="images.length > 1">
+                    <img class="col-3 thumbnail"
+                        *ngFor="let image of images"
+                        (mouseover)="setTarget(image)"
+                        [src]="image"
+                        (error)="onImageError($event)">
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <h2>{{product.name}}</h2>
+            <h3>{{product.code}} <span *ngIf="product.scale">- {{product.scale.name}}</span></h3>
+            <p class="text-justify" *ngIf="product.content_translations && product.content_translations[locale]" [innerHtml]="product.content_translations[locale] | safe: 'html'"></p>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="loading" class="text-center my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden" i18n="@@loading">Loading...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="product">
+    <mmx-product-slider *ngIf="sliderAPIParams" [alternate]="true" [title]="sliderTitle" [apiParams]="sliderAPIParams" (nbProductFetchEvent)="onNbProductFetchEvent($event, 'CATALOGUE')"></mmx-product-slider>
+    <mmx-product-slider
+        *ngFor="let category of product.simplified_categories; index as i"
+        [alternate]="(isInCatalogue && i%2 != 0) || (!isInCatalogue && i%2 == 0)"
+        title="{{category.name}}"
+        [apiParams]="[{'name': 'categories', 'op': 'any', 'val': {'name': 'category_id', 'op': '==', 'val': category.category_id}}]">
+    </mmx-product-slider>
+</div>
+
+<mmx-social></mmx-social>
+

@@ -1,0 +1,147 @@
+.newsletter {
+    padding: 5px;
+    background: var(--background-img);
+}
+
+.social {
+    background: linear-gradient(to bottom, rgb(114, 159, 250), rgb(159, 187, 252));
+}
+
+.newsletter, .social {
+    min-height: 200px;
+    height: 100%;
+}
+
+.social-v2--icon {
+    fill: var(--light-color-bg);
+    width: 75px;
+    height: 80px;
+}
+
+.social a {
+    color: #729ffa;
+}
+
+.social-v2--button-pill {
+    background: #fff;
+    border-radius: 50rem;
+    font-weight: 500;
+    padding: 0.6rem 0.9rem;
+}
+
+.social-v2--list-socials>a {
+    background: var(--light-color-bg);
+    border-radius: 50rem;
+    display: inline-block;
+    padding: 0.5rem;
+    align-self: center;
+    margin-right: 5px;
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.social a {
+    color: #729ffa;
+}
+
+.social-v2--button-pill .arrow-right svg {
+    width: 16px;
+    height: 16px;
+}
+
+.social .arrow-right svg {
+    fill: #729ffa;
+}
+
+.h1 {
+    color: var(--accent-color-font);
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.social-v2--list-socials.show>a {
+    background: var(--accent-color-font);
+    border-radius: 50rem;
+    display: inline-block;
+    padding: 0.5rem;
+    align-self: center;
+    margin-right: 5px;
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.social-v2--list-socials svg {
+    width: 28px;
+    height: 28px;
+    fill: #729ffa;
+}
+
+#social-discover {
+    display: flex;
+}
+
+#social-list {
+    display: none;
+
+    &.flex {
+        display: flex;
+    }
+
+    a {
+        display: none;
+    }
+}
+
+.social-v2--list-socials--toggle {
+    margin-left: auto;
+    background: rgba(0,0,0,0) !important;
+    border-color: #fff !important;
+
+    svg {
+        transform: rotate(45deg);
+        fill: #fff !important;
+    }
+}
+
+.newsletter {
+    button[type=submit] {
+        outline: none;
+        background-color: var(--accent-color-bg);
+        transition: filter .2s linear;
+    }
+    input {
+        max-width: 380px;
+    }
+}
+
+@media (min-width: 992px) {
+    .social-v2--icon {
+        width: 150px;
+        height: 95px;
+    }
+
+    .h1 {
+        font-size: 22px;
+        line-height: 22px;
+    }
+}
+
+@media (min-width: 768px) {
+    .social-v2--icon {
+        width: 90px;
+    }
+
+    .social-v2--button-pill {
+        padding: 0.9rem 1rem;
+    }
+
+    .social-v2--list-socials {
+        min-height: 53px;
+    }
+
+    .h1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
