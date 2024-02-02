@@ -16,4 +16,5 @@ export * from './lib/components/mmx-faqitem/mmx-faqitem.component';
 export * from './lib/components/mmx-scale-tabs/mmx-scale-tabs.component';
 export * from './lib/components/mmx-product-slider/mmx-product-slider.component';
 export * from './lib/components/mmx-google-map/mmx-google-map.component';
+export * from './lib/components/mmx-product-view/mmx-product-view.component'
 export * from './lib/mmx-angular.module';

@@ -27,6 +27,7 @@ export class MmxProductViewComponent {
     public displayedImages: any;
     @Input() public imagesURL: string = '';
     @Input() public environment:any = [];
+    @Input() public noImageURL: string = '';
     public productsImageURL  = this.imagesURL + '/products/';
     public imageIndex = 0;
     public sliderTitle = '';
